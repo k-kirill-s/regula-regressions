@@ -1,0 +1,27 @@
+{
+  // Use Prettier for formatting
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+
+  // Run ESLint fixes on save (includes Prettier via eslint-plugin-prettier)
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+
+  // Keep line endings consistent with repo Prettier config
+  "files.eol": "\n",
+
+  // Enable ESLint as formatter and fixer on save
+  "eslint.format.enable": true,
+
+  // Ensure ESLint extension runs with flat config
+  "eslint.useFlatConfig": true,
+  // Flat config for ESLint 9+
+
+  // Make sure ESLint is the default per language
+  "[typescript]": { "editor.defaultFormatter": "dbaeumer.vscode-eslint" },
+  "[typescriptreact]": { "editor.defaultFormatter": "dbaeumer.vscode-eslint" },
+  "[javascript]": { "editor.defaultFormatter": "dbaeumer.vscode-eslint" },
+  "[javascriptreact]": { "editor.defaultFormatter": "dbaeumer.vscode-eslint" }
+}

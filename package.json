@@ -1,0 +1,41 @@
+{
+  "name": "regula-regressions",
+  "version": "1.0.0",
+  "description": "Playwright-based test automation project for Face Image Quality API and UI testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test -c config/playwright.config.ts",
+    "test:api": "playwright test tests/functional/ -c config/playwright.config.ts --project=api",
+    "test:ui": "playwright test tests/ui/ -c config/playwright.config.ts --project=chromium",
+    "report": "playwright show-report -c config/playwright.config.ts",
+    "lint": "eslint . --ext .ts,.tsx,.js,.cjs",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "install:browsers": "playwright install --with-deps"
+  },
+  "keywords": [
+    "playwright",
+    "testing",
+    "automation",
+    "api",
+    "ui",
+    "face-recognition"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.42.1",
+    "@types/node": "^20.11.27",
+    "@typescript-eslint/eslint-plugin": "^8.41.0",
+    "@typescript-eslint/parser": "^8.41.0",
+    "eslint": "^9.5.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-playwright": "^1.5.4",
+    "eslint-plugin-prettier": "^5.1.3",
+    "globals": "^13.24.0",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.2"
+  }
+}

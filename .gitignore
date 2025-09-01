@@ -1,0 +1,41 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Playwright artifacts
+reports/
+playwright-report/
+test-results/
+
+# Editor/IDE
+.idea/
+.fleet/
+.vscode/
+!.vscode/settings.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env files
+.env
+.env.*
+.env.local
+
+# TypeScript build info
+*.tsbuildinfo
