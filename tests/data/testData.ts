@@ -1,42 +1,42 @@
 import * as path from 'path';
 import { ImageQualityCase } from '../../src/types/test';
-import { APIScenarios } from '../../src/types/detect';
+import { ScenariosData } from '../../src/types/detect';
 
 const imagesDir = path.resolve(__dirname, '../data/images');
 
 export const imageQualityCases: ImageQualityCase[] = [
   {
     description: 'US photo',
-    path: path.join(imagesDir, 'complaint-us.jpg'),
-    complainces: [
+    path: path.join(imagesDir, 'us-cropped.jpg'),
+    compliances: [
       {
-        scenario: APIScenarios.VISA_USA,
+        scenario: ScenariosData.visa_usa,
         status: 'compliant',
       },
       {
-        scenario: APIScenarios.VISA_SCHENGEN,
+        scenario: ScenariosData.visa_schengen,
         status: 'non-compliant',
       },
       {
-        scenario: APIScenarios.ICAO,
+        scenario: ScenariosData.icao,
         status: 'compliant',
       },
     ],
   },
   {
     description: 'Schengen photo',
-    path: path.join(imagesDir, 'complaint-schengen.jpg'),
-    complainces: [
+    path: path.join(imagesDir, 'schengen.jpg'),
+    compliances: [
       {
-        scenario: APIScenarios.VISA_USA,
+        scenario: ScenariosData.visa_usa,
         status: 'non-compliant',
       },
       {
-        scenario: APIScenarios.VISA_SCHENGEN,
+        scenario: ScenariosData.visa_schengen,
         status: 'compliant',
       },
       {
-        scenario: APIScenarios.ICAO,
+        scenario: ScenariosData.icao,
         status: 'compliant',
       },
     ],

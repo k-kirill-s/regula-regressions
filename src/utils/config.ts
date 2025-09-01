@@ -1,7 +1,7 @@
-export interface ServicesConfig {
+export interface Config {
   BASE_URL: string;
 }
 
-export const servicesConfig: ServicesConfig = {
+export const config: Config = {
   BASE_URL: process.env.BASE_URL || 'https://faceapi.regulaforensics.com',
 };

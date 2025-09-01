@@ -1,9 +1,9 @@
 import { request } from 'playwright/test';
 
-import { servicesConfig } from '../../utils/config/services';
+import { config } from '../../utils/config';
 
 export const getDefaultAPIContext = async () => {
   return await request.newContext({
-    baseURL: servicesConfig.BASE_URL,
+    baseURL: config.BASE_URL,
   });
 };

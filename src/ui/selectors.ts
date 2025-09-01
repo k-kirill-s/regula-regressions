@@ -1,18 +1,20 @@
 export const uiSelectors = {
   faceImageQuality: {
-    uploadButton: '[data-testid="face-quality-upload-button"]',
-    resultContainer: '[data-testid="face-quality-result-container"]',
-    qualityScore: '[data-testid="face-quality-score"]',
-    errorMessage: '[data-testid="face-quality-error"]',
-    uploadInput: 'input[type="file"][data-testid="face-quality-file-input"]',
-    scenarioPicker: 'select[data-testid="scenario-picker"]',
+    scenarioControl: 'div[class*="select__control"]',
+    scenarioMenu: 'div[class*="select__menu"]',
+    scenarioOption: 'div[class*="select__option"]',
+    uploadButton: 'button[data-test="button-upload-file"], button:has-text("Upload a file")',
+    imageSelected: 'img[class*="mainImage"]',
+    resultsTab: 'div[role="tab"][class*="Tabs_results"]',
+    resultsStatus: 'span[class*="Intro_status-text"]',
+    requestTab: 'div[role="tab"][class*="Tabs_request"]',
+    responseTab: 'div[role="tab"][class*="Tabs_response"]',
   },
   navigation: {
-    faceQualityLink: '[data-testid="nav-face-quality"]',
+    faceQualityLink: 'text=Face image quality',
   },
   common: {
-    loadingIndicator: '[data-testid="loading-indicator"]',
-    uploadInstructions: '[data-testid="upload-instructions"]',
-    qualityDetails: '[data-testid="quality-details"]',
+    cookieAcceptAll: '.cookiebanner__button__all',
+    privacyConfirm: 'button:has-text("Confirm")',
   },
 } as const;

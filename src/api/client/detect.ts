@@ -2,13 +2,13 @@ import { post } from './base';
 import { StatusCodes } from '../../constants/api';
 import { apiEndpoints } from '../../constants/endpoints';
 import { expectToEqual } from '../../service/assertions';
-import type { DetectionResponse, DetectRequest } from '../../types/detect';
+import type { DetectResponse, DetectRequest } from '../../types/detect';
 import { createBasicHeaders } from '../../utils/header';
 
 export async function detect(
   data: DetectRequest,
   statusCode = StatusCodes.OK,
-): Promise<DetectionResponse> {
+): Promise<DetectResponse> {
   const headers = createBasicHeaders('application/json');
   const body = JSON.stringify(data, null, 2);
 
